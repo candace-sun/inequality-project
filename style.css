@@ -1,0 +1,42 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("title-page-draft.gif");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.progress {
+  position: absolute;
+  font-size: 4rem;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.next {
+  right: 0px;
+}
+
+.prev {
+  left: 0px;
+}
+
+#light {
+  height: 12px;
+  width: 12px;
+  z-index: 50;
+  background-color: white;
+  border-radius: 1000px;
+  filter: blur(0.3rem);
+}
