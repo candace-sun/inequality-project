@@ -28,6 +28,12 @@ function nextPage() {
     document.getElementById("quiz").style.display = "none";
     document.getElementById("light").style.display = "block";
   }
+
+  if (currIndex == 0 || currIndex == 24) {
+    document.getElementById("bg").style.backgroundColor = "#cfcbca";
+  } else {
+    document.getElementById("bg").style.backgroundColor = "black";
+  }
 }
 
 function prevPage() {
@@ -44,6 +50,12 @@ function prevPage() {
     ).style.backgroundImage = `url('${img_nums[currIndex]}')`;
     document.getElementById("quiz").style.display = "none";
     document.getElementById("light").style.display = "block";
+  }
+
+  if (currIndex == 0 || currIndex == 24) {
+    document.getElementById("bg").style.backgroundColor = "#cfcbca";
+  } else {
+    document.getElementById("bg").style.backgroundColor = "black";
   }
 }
 
