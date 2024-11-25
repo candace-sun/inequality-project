@@ -46,10 +46,46 @@ html {
 #light {
   height: 24px;
   width: 24px;
-  z-index: 50;
+  z-index: 1;
   background-color: white;
   border-radius: 1000px;
   filter: blur(0.7rem);
+}
+
+#quiz {
+  color: white;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  padding-top: 4rem;
+  padding-left: 3rem;
+  padding-right: 5rem;
+  display: none;
+  z-index: 200;
+}
+
+#answer {
+  font-size: medium;
+}
+
+input,
+label,
+span {
+  z-index: 100;
+}
+
+.submit {
+  padding: 8px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+
+  font-size: medium;
+}
+
+.submit:hover {
+  color: black;
+  background-color: white;
 }
 
 /* The Modal (background) */
@@ -99,5 +135,9 @@ html {
 
   .modal-content {
     font-size: 1rem;
+  }
+
+  #answer {
+    font-size: small;
   }
 }

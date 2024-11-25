@@ -4,6 +4,10 @@ let currIndex = 0;
 
 for (let i = 1; i <= 24; i++) {
   img_nums.push("slides/" + i + ".gif");
+
+  if (i == 20) {
+    img_nums.push("QUIZ");
+  }
 }
 
 console.log(img_nums);
@@ -12,18 +16,45 @@ function nextPage() {
   if (currIndex < img_nums.length - 1) {
     currIndex += 1;
   }
-  document.getElementById(
-    "bg"
-  ).style.backgroundImage = `url('${img_nums[currIndex]}')`;
+
+  if (img_nums[currIndex] == "QUIZ") {
+    document.getElementById("bg").style.backgroundImage = "none";
+    document.getElementById("quiz").style.display = "block";
+    document.getElementById("light").style.display = "none";
+  } else {
+    document.getElementById(
+      "bg"
+    ).style.backgroundImage = `url('${img_nums[currIndex]}')`;
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("light").style.display = "block";
+  }
 }
 
 function prevPage() {
   if (currIndex > 0) {
     currIndex -= 1;
   }
-  document.getElementById(
-    "bg"
-  ).style.backgroundImage = `url('${img_nums[currIndex]}')`;
+  if (img_nums[currIndex] == "QUIZ") {
+    document.getElementById("bg").style.backgroundImage = "none";
+    document.getElementById("light").style.display = "none";
+    document.getElementById("quiz").style.display = "block";
+  } else {
+    document.getElementById(
+      "bg"
+    ).style.backgroundImage = `url('${img_nums[currIndex]}')`;
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("light").style.display = "block";
+  }
+}
+
+function checkAnswer() {
+  if (document.getElementById("option-two").checked) {
+    document.getElementById("answer").innerHTML = "Correct!<br/><br/>";
+  } else {
+    document.getElementById("answer").innerHTML = "Incorrect<br/><br/>";
+  }
+  document.getElementById("answer").innerHTML +=
+    "Despite their accomplishments, a socioeconomic gradient is not obviously present for Asian Americans in key assimilation outcomes - particularly for political participation, but also in intermarriage, locational attainment, and mental health. This further indicates the impact of racialization in Asian assimilation.<br/><br/>As an interesting comparison, among Hispanics, SES is regarded as a strong correlate for assimilation measures, with educational achievement as a particularly strong factor. <br/><br/> (Lee and Kye)";
 }
 
 window.addEventListener("mousemove", (e) => {
