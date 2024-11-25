@@ -44,12 +44,12 @@ html {
 }
 
 #light {
-  height: 28px;
-  width: 28px;
+  height: 24px;
+  width: 24px;
   z-index: 50;
   background-color: white;
   border-radius: 1000px;
-  filter: blur(0.5rem);
+  filter: blur(0.7rem);
 }
 
 /* The Modal (background) */
@@ -95,5 +95,9 @@ html {
 @media screen and (max-width: 1200px) {
   #light {
     display: none;
+  }
+
+  .modal-content {
+    font-size: 1rem;
   }
 }

@@ -2,7 +2,7 @@ let imgs = ["title-page-draft.gif", "2.gif", "3.gif"];
 let img_nums = [];
 let currIndex = 0;
 
-for (let i = 1; i <= 21; i++) {
+for (let i = 1; i <= 24; i++) {
   img_nums.push("slides/" + i + ".gif");
 }
 
